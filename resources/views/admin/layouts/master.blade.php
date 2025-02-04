@@ -6,7 +6,9 @@
     <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <link rel="icon" href="{{ asset('admin/assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon" />
-
+    <script src="{{ asset('admin/assets/js/core/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('summernote-0.9.0-dist/summernote-lite.min.js') }}"></script>
+    <link href="{{ asset('summernote-0.9.0-dist/summernote-lite.min.css') }}" rel="stylesheet">
     <!-- Fonts and icons -->
     <script src="{{ asset('admin/assets/js/plugin/webfont/webfont.min.js') }}"></script>
     <script>
@@ -33,11 +35,11 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/plugins.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/kaiadmin.min.css') }}" />
-    <link href="{{ asset('summernote/summernote-lite.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('summernote/summernote-lite.min.js') }}"></script>
+
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/demo.css') }}" />
+    @yield('css')
 </head>
 
 <body>
@@ -57,6 +59,7 @@
         <!-- End Custom template -->
         @include('admin.partial.custom-template')
     </div>
+    @yield('script')
     <!--   Core JS Files   -->
     <script src="{{ asset('admin/assets/js/core/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('admin/assets/js/core/popper.min.js') }}"></script>
@@ -121,6 +124,7 @@
             fillColor: "rgba(255, 165, 52, .14)",
         });
     </script>
+
 </body>
 
 </html>
