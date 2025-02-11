@@ -271,7 +271,8 @@
                                     <div class="u-text">
                                         <h4>Hizrian</h4>
                                         <p class="text-muted">hello@example.com</p>
-                                        <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View
+                                        <a href="{{ route('profile.edit') }}"
+                                            class="btn btn-xs btn-secondary btn-sm">View
                                             Profile</a>
                                     </div>
                                 </div>
