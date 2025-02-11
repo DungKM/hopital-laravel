@@ -13,10 +13,10 @@
             <div class="card-title">Tạo phòng làm việc</div>
         </div>
         <div class="card-body">
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.workrooms.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label for="name" class="form-label">Name:</label><br>
-                <input type="text" name="name" value="{{ old('name') }}" class="form-control"><br>
+                <input type="text" name="name" value="{{ old('name') }}" class="form-control mb-2">
                 @error('name')
                     <div style="color: red">
                         {{ $message }}

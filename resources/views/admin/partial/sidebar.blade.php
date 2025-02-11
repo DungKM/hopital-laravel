@@ -40,21 +40,30 @@
                     <a href="{{ route('admin.users.index') }}">
                         <i class="fas fa-user"></i>
                         <p>Người dùng</p>
-
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.specialties.index') }}">
                         <i class="fas icon-screen-tablet"></i>
                         <p>Chuyên môn</p>
-
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.workrooms.index') }}">
                         <i class="fas fa-layer-group"></i>
                         <p>Loại phòng làm việc</p>
-
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.rooms.index') }}">
+                        <i class="fas fa-pen-square"></i>
+                        <p>Phòng bệnh</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.menus.index') }}">
+                        <i class="fas fa-th-list"></i>
+                        <p>Menus</p>
                     </a>
                 </li>
             </ul>

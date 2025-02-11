@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Danh sách chuyên môn')
+@section('title', 'Danh sách phòng làm việc')
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
@@ -7,10 +7,10 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <div class="card-title">Danh sách chuyên môn</div>
+            <div class="card-title">Danh sách phòng làm việc</div>
         </div>
         <div class="card-body">
-            <a href="{{ route('admin.specialties.create') }}" class="btn btn-success">Create Specialties</a>
+            <a href="{{ route('admin.workrooms.create') }}" class="btn btn-success">Create WorkRoom</a>
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($specialties as $item)
+                    @foreach ($workrooms as $item)
                         <tr data-id="{{ $item->id }}">
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
@@ -68,7 +68,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="infoModalLabel">Specialties Information</h5>
+                    <h5 class="modal-title" id="infoModalLabel">WorkRoom Information</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
